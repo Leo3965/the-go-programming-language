@@ -3,10 +3,14 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
 )
 
 func main() {
+	start := time.Now()
 	exercise()
+	secs := time.Since(start).Seconds()
+	fmt.Printf("Total execution time: %.2fs\n", secs)
 }
 
 func example() {
